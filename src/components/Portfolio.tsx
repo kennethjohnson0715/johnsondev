@@ -3,25 +3,28 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "Luxe E-Commerce",
-    category: "E-Commerce",
-    image: "https://picsum.photos/seed/ecommerce/800/600",
-    description: "A premium shopping experience with seamless checkout and inventory management.",
-    tags: ["React", "Node.js", "Stripe"]
+    title: "G & S Auto Care",
+    category: "Automotive Services",
+    image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=800",
+    description: "A professional service platform for G & S Auto Care in Phoenix, featuring service listings and customer engagement.",
+    tags: ["React", "Tailwind CSS", "Vite"],
+    link: "https://gandsautocarephoenix.vercel.app/"
   },
   {
-    title: "Urban Dining",
-    category: "Hospitality",
-    image: "https://picsum.photos/seed/restaurant/800/600",
-    description: "Interactive menu and reservation system for a modern downtown restaurant.",
-    tags: ["Next.js", "Tailwind CSS", "Framer Motion"]
+    title: "CB Auto Repair",
+    category: "Automotive Services",
+    image: "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?auto=format&fit=crop&q=80&w=800",
+    description: "Custom web presence for CB Auto Repair in Phoenix, optimizing local search and service accessibility.",
+    tags: ["Next.js", "Modern UI", "SEO"],
+    link: "https://cbautorepairphxarizona.vercel.app/"
   },
   {
-    title: "TechCorp Solutions",
-    category: "Corporate",
-    image: "https://picsum.photos/seed/corporate/800/600",
-    description: "Professional corporate identity website with client portal integration.",
-    tags: ["React", "TypeScript", "CMS"]
+    title: "FreeFlow Health",
+    category: "Healthcare & Wellness",
+    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800",
+    description: "A comprehensive health and wellness platform focused on patient care and streamlined health services.",
+    tags: ["Healthcare", "UX Design", "Platform"],
+    link: "https://www.freeflow.health/"
   }
 ];
 
@@ -32,7 +35,7 @@ export default function Portfolio() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">Featured Work</h2>
           <p className="text-zinc-400 max-w-2xl mx-auto">
-            A selection of our recent projects delivering impact and innovation.
+            A selection of my recent projects delivering impact and innovation.
           </p>
         </div>
 
@@ -54,9 +57,14 @@ export default function Portfolio() {
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                  <button className="p-3 bg-white text-black rounded-full hover:bg-zinc-200 transition-colors">
+                  <a 
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 bg-white text-black rounded-full hover:bg-zinc-200 transition-colors"
+                  >
                     <ExternalLink className="w-5 h-5" />
-                  </button>
+                  </a>
                 </div>
               </div>
               
@@ -88,7 +96,7 @@ export default function Portfolio() {
             href="#contact" 
             className="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 font-medium transition-colors"
           >
-            Contact us to see more work <ExternalLink className="w-4 h-4" />
+            Contact me to see more work <ExternalLink className="w-4 h-4" />
           </a>
         </div>
       </div>

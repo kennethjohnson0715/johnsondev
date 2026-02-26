@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { ArrowRight, Code, Layout, Smartphone, Palette, Globe, Phone, Mail } from "lucide-react";
 import { useRef } from "react";
+import profilePic from "../assets/Kenneth.png";
 
 export default function Hero() {
   const ref = useRef(null);
@@ -15,15 +16,15 @@ export default function Hero() {
   return (
     <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-zinc-950 text-white pt-20">
       {/* Background Image with Overlay */}
-      <motion.div style={{ y, opacity }} className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0">
         <img 
-          src="https://picsum.photos/seed/digital/1920/1080?blur=2" 
+          src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1920" 
           alt="Background" 
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover opacity-20"
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/80 via-zinc-950/70 to-zinc-950"></div>
-      </motion.div>
+      </div>
 
       {/* Background Gradients */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
@@ -69,6 +70,21 @@ export default function Hero() {
           >
             Professional Web Design & Development
           </motion.span>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            className="mb-12 relative mx-auto w-fit"
+          >
+            <div className="absolute inset-0 bg-indigo-500/30 blur-3xl rounded-full"></div>
+            <img 
+              src={profilePic} 
+              alt="Kenneth" 
+              className="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-white/10 relative z-10 object-cover shadow-2xl mx-auto"
+            />
+          </motion.div>
+
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent">
             <motion.span
               initial={{ opacity: 0, y: 20 }}
@@ -84,7 +100,7 @@ export default function Hero() {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="text-xl md:text-2xl text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            We build high-performance, stunning websites that drive results. 
+            I build high-performance, stunning websites that drive results. 
             Elevate your business with a custom digital presence.
           </motion.p>
           
