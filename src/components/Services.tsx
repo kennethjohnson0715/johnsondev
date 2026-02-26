@@ -56,6 +56,15 @@ export default function Services() {
             </motion.div>
           ))}
         </div>
+
+        <div className="text-center mt-24">
+          <h3 className="text-3xl md:text-4xl font-bold mb-4">My Pricing</h3>
+          <p className="text-zinc-400 max-w-2xl mx-auto text-lg">
+            My services are available for a monthly fee of <span className="text-indigo-400 font-semibold">$50</span>,
+            with a one-time website setup fee of <span className="text-indigo-400 font-semibold">$100</span>.
+            This ensures comprehensive support and a stunning online presence.
+          </p>
+        </div>
       </div>
     </section>
   );
